@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Price Analysis Project</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background: #35424a;
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-style: italic;
+        }
+
+        nav {
+            text-align: center;
+            background: #35424a;
+            padding: 0.5rem 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        section {
+            margin: 2rem 0;
+        }
+
+        h2 {
+            border-bottom: 2px solid #35424a;
+            padding-bottom: 0.5rem;
+        }
+
+        ul, ol {
+            margin-left: 1rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 0.5rem;
+            text-align: center;
+        }
+
+        table th {
+            background: #35424a;
+            color: white;
+        }
+
+        footer {
+            background: #35424a;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+
+        footer a {
+            color: #00bcd4;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* JavaScript demo for interactivity */
+        #fuelEfficiencyMessage {
+            margin-top: 1rem;
+            font-weight: bold;
+            color: #35424a;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Car Price Analysis</h1>
+        <p>An exploration of the key factors influencing car prices</p>
+    </header>
+
+    <nav>
+        <a href="#group">Group Members</a>
+        <a href="#techniques">Techniques</a>
+        <a href="#topic">Project Topic</a>
+        <a href="#findings">Findings</a>
+        <a href="#applications">Applications</a>
+        <a href="#AI_Applications">AI Application and Skills applied</a>
+        <a href="#discoveries">Discoveries</a>
+        <a href="#references">References</a>
+    </nav>
+
+    <div class="container">
+
+        <!-- Group Members Section -->
+        <section id="group">
+            <h2>Group Members</h2>
+            <p>Below is the list of our group members and their contributions to the project:</p>
+            <ul>
+                <li>Chak Hin CHENG (25%)</li>
+                <li>Hin Chi Hymns HO (25%)</li>
+                <li>Hongyu LIN (25%)</li>
+                <li>Wing Yin WAN (25%)</li>
+            </ul>
+            <p>Group Name: <strong>CS1102 TUE 11:00-11:50 Project Group 1</strong></p>
+        </section>
+
+        <!-- Techniques Demonstrated Section -->
+        <section id="techniques">
+            <h2>Techniques Demonstrated</h2>
+            <p>In this project, we have demonstrated the following techniques:</p>
+            <ul>
+                <li>HTML for structuring the content of webpages</li>
+                <li>CSS for styling and layout of webpages</li>
+                <li>JavaScript for interactivity (e.g., dynamic messages and collapsible sections)</li>
+                <li>Responsive design principles for mobile-friendly webpages</li>
+            </ul>
+        </section>
+
+        <!-- Project Topic Section -->
+        <section id="topic">
+            <h2>Project Topic</h2>
+            <p>
+                Background of dataset:
+                <ul>
+                    <li>Company Overview: Geely Auto, a Chinese automobile manufacturer, aims to enter the US market by establishing a local manufacturing unit.</li>
+                    <li>Data Collection: The consulting firm has gathered a comprehensive dataset of various car types in the US market.</li>
+                    <li>Objective: Enhancing this company competitives with US and European car manufacturers.</li>
+                </ul>
+            </p>
+            <p>
+                Goals:
+                <ul>
+                    <li>Develop a model to analyze car pricing based on independent variables.</li>
+                    <li>Assist management in understanding pricing dynamics to inform car design and business strategies.</li>
+                </ul>
+            </p>
+            <p>We derive our plan into three significant plan</p>
+            <ol>
+                <li>Understanding the data</li>
+                <li>Asking effective questions</li>
+                <li>Analyzing data</li>
+                <li>Representing it in an effective way</li>
+            </ol>
+                Our project explores the key factors influencing car prices using the dataset <code>CarPrice_Assignment.csv</code>. 
+                We focused on five critical factors: horsepower, curb weight, engine size, car dimensions, and fuel efficiency. 
+                The findings aim to assist sellers, consumers, and developers of predictive models in understanding car pricing dynamics.
+            </p>
+            <p>
+                We used two chatbots for accuracy (<strong>Chat-4o-128k</strong> and <strong>Claude-3.5-Sonnet-200k</strong>) and focused on 
+                <strong>horsepower</strong>, <strong>curb weight</strong>, <strong>engine size</strong>, <strong>width/length dimensions</strong>, 
+                and <strong>fuel efficiency</strong> because these variables were analyzed and emphasized by both chatbots.
+            </p>
+        </section>
+
+        <!-- Findings Section -->
+        <section id="findings">
+            <h2>Findings</h2>
+            <p>The key findings related to the most influential factors affecting car prices are summarized below:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Variable</th>
+                        <th>Correlation with Price</th>
+                        <th>Key Insights</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Horsepower</td>
+                        <td>Strong Positive (≈ 0.81)</td>
+                        <td>Higher horsepower is associated with higher prices due to better performance.</td>
+                    </tr>
+                    <tr>
+                        <td>Curb Weight</td>
+                        <td>Very Strong Positive (≈ 0.87)</td>
+                        <td>Heavier cars are more expensive because of their premium materials and safety features.</td>
+                    </tr>
+                    <tr>
+                        <td>Engine Size</td>
+                        <td>Strong Positive (≈ 0.87)</td>
+                        <td>Larger engines could perfrom higher performance, so the prices are higher.</td>
+                    </tr>
+                    <tr>
+                        <td>Car Dimensions (Width, Length)</td>
+                        <td>Moderate to Strong Positive</td>
+                        <td>It is more luxurious and spacious in wider and longer cars, increasing their price.</td>
+                    </tr>
+                    <tr>
+                        <td>Fuel Efficiency (City/Highway MPG)</td>
+                        <td>Negative (≈ -0.68 to -0.70)</td>
+                        <td>Higher mileage cars are generally smaller and less powerful, making them cheaper.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button onclick="showFuelEfficiencyMessage()">Click to Learn About Fuel Efficiency!</button>
+            <div id="fuelEfficiencyMessage"></div>
+        </section>
+
+        <!-- Applications Section -->
+        <section id="AI_Applications">
+                    <h2>Explorating on AI Application</h2>
+                    <p>During the analysis process, we found that using different strategies is helping AI to give insight more explicity</p>
+                    <ul>
+                        <li><strong>Polite Prompting Tech</strong></li>
+                            <p>We found that using polite speech to prompt Ai may derive more detailed insight more than directly give command prompting tech.<br />
+                            Initially, two new chats were started. In one chat, Artificial Intelligence was politely asked to explain the document's content. In the other chat, a request was made for a summary of the information. The outcomes differed; polite inquiries yielded more detailed responses from the AI. This phenomenon suggests that polite prompting encourages the AI to consider all information in the document, minimizing the risk of overlooking details. In contrast, when commands are direct, the AI responds narrowly, providing only the requested information without elaboration.It's just like when You ask one plus one Artificial intelligence will answer it equals two,but It won't tell you what plus means and why it works.</p>
+                        <table>
+                            <tr>
+                              <th>Less Polite</th>
+                              <th><img src="Original_Baeline.png" alt="Original Less explained answer"></th>
+                            </tr>
+                            <tr>
+                              <td>More polite</td>
+                              <td><img src="More_Polite.png" alt="More explained answer"></td>
+                            </tr>
+                        </table>
+                        <li><strong>Giving potential Context</strong> <br />
+                            Talk about giving potential context, the AI was tasked with analyzing which cars are most cost-effective at various price points. It provided several options, but the analysis assumed a scenario in which Japanese cars had lost popularity, affecting the choices available. This indicates that results can vary significantly based on contextual factors.</li>
+                            <table>
+                                <tr>
+                                  <th>Less Polite</th>
+                                  <th><img src="less_polite.png" alt="Original Less explained answer"></th>
+                                </tr>
+                                <tr>
+                                  <td>More polite</td>
+                                  <td><img src="Providing some poential context.png" alt="More explained answer"></td>
+                                </tr>
+                            </table>
+                        <li><strong>Emphasizing the importance</strong> <br />
+                            In terms of Emphasizing the importance, the AI was requested to categorize features and summarize them into several conditions to explore their relationships. This approach could be beneficial for developers and researchers in setting competitive pricing strategies.</li>
+                            <table>
+                                <tr>
+                                  <th>Less Polite</th>
+                                  <th><img src="less_polite.png" alt="Original Less explained answer"></th>
+                                </tr>
+                                <tr>
+                                  <td>More polite</td>
+                                  <td><img src="Emphasizing on Importance.png" alt="More explained answer"></td>
+                                </tr>
+                            </table>
+                        <li><strong>Double checking skills</strong> <br />
+                            Double check skill is useful to ensure the reliability of results, a methodical approach was taken to double-check findings. The AI first processed all data, after which the results were reversed to verify the initial data, ensuring the validity and integrity of the information.</li>
+                            <table>
+                                <tr>
+                                  <th>Less Polite</th>
+                                  <th><img src="First_answer.png" alt="Original First answer"></th>
+                                </tr>
+                                <tr>
+                                  <td>More polite</td>
+                                  <td><img src="Double_Checking_answer.png" alt="Double Checking answer answer"></td>
+                                </tr>
+                            </table>
+                    </ul>
+        </section>
+
+        <!-- Applications Section -->
+        <section id="applications">
+            <h2>Application Scenarios</h2>
+            <p>The findings from this analysis can be applied in the following scenarios: sellers, consumers and predicitve models.</p>
+            <ul>
+                <li><strong>Sellers:</strong> Manufactuers and sellers can use these variables to optimize pricing strategies, highlighting performance features for high-priced models plus targeting fuel-efficient models to attract economical consumers.</li>
+                <li><strong>Consumers:</strong> Consumers can make use of this analysis to these variables to select cars that fit their budget and requirements, balancing performance and efficiency.</li>
+                <li><strong>Predictive Models:</strong> Companies and researchers could do further to build predictive models using the correlation data to estimate car prices under specific conditions.</li>
+            </ul>
+        </section>
+
+        <!-- Discoveries Section -->
+        <section id="discoveries">
+            <h2>Discoveries</h2>
+            <p>During this project, we discovered the following:</p>
+            <ul>
+                <li>There are strong correlation between engine size, curb weight, and horsepower with car prices. This shows the importance of performance in pricing decisions.</li>
+                <li>Fuel efficiency negatively impacts price, showing a trade-off between efficiency and performance-focused features.</li>
+                <li>If we can use machine learning or regression models, and also with the assistance of AI, these factors can predict car prices with high accuracy.</li>
+                <li>We improved our skills in HTML, CSS, and JavaScript by building interactive and well-structured webpages.</li>
+            </ul>
+        </section>
+
+        <!-- References Section -->
+        <section id="references">
+            <h2>References</h2>
+            <ol>
+                <li>Poe Chat History: <a href="https://poe.com/s/4dnLK0NzW8i2HFCD7Wpz" target="_blank">https://poe.com/s/4dnLK0NzW8i2HFCD7Wpz</a></li>
+                <li>Car Price Dataset: Downloaded from <a href="https://www.kaggle.com/datasets/hellbuoy/car-price-prediction" target="_blank">Kaggle - Car Price Prediction Multiple Linear Regression</a></li>
+                <li>HTML and CSS Tutorials: Learned from <a href="https://www.w3schools.com/" target="_blank">W3Schools</a> and CS1102 materials.</li>
+            </ol>
+        </section>
+    </div>
+
+    <footer>
+        <p>Created by CS1102 TUE 11:00-11:50 Project Group 1</p>
+    </footer>
+
+    <script>
+        // JavaScript for dynamic messages
+        function showFuelEfficiencyMessage() {
+            const message = "Fuel-efficient cars are ideal for budget-conscious buyers, but they often sacrifice power and performance.";
+            document.getElementById("fuelEfficiencyMessage").innerText = message;
+        }
+    </script>
+</body>
+
+</html>
